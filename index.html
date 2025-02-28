@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced F1 Race Statistics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js -->
+</head>
+<body>
+    <div class="dashboard">
+        <header class="race-overview">
+            <h1>🏎️ F1 Live Race Dashboard</h1>
+            <div id="race-selector">
+                <select id="race-dropdown">
+                    <option value="">Select Race</option>
+                    <!-- Dynamic race options will populate here -->
+                </select>
+            </div>
+            <div id="race-info">
+                <p>Loading race info...</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="chart" id="live-leaderboard">
+                <h2>🏆 Live Leaderboard</h2>
+                <ul id="leaderboard-list">
+                    <!-- Live leaderboard content goes here -->
+                </ul>
+            </section>
+
+            <section class="chart" id="lap-times-chart">
+                <h2>Driver Lap Times</h2>
+                <canvas id="lapTimeCanvas"></canvas>
+            </section>
+
+            <section class="chart" id="positions-chart">
+                <h2>Driver Positions</h2>
+                <canvas id="positionCanvas"></canvas>
+            </section>
+
+            <section class="chart" id="pit-stops">
+                <h2>🛠️ Pit Stops</h2>
+                <div id="pit-stop-details">
+                    <!-- Pit stop info for each driver -->
+                </div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <div class="filters">
+                <h3>🔍 Filters</h3>
+                <input type="text" id="driver-search" placeholder="Search Driver...">
+            </div>
+            <div class="driver-comparison">
+                <h3>🔄 Driver Comparison</h3>
+                <select id="driver1-dropdown"></select>
+                <select id="driver2-dropdown"></select>
+                <button id="compare-button">Compare</button>
+            </div>
+            <div id="comparison-result">
+                <!-- Comparison results will be displayed here -->
+            </div>
+            <div class="weather-info">
+                <h3>🌤️ Weather</h3>
+                <p id="weather-details">Loading weather...</p>
+            </div>
+            <div class="circuit-history">
+                <h3>🏟️ Circuit Records</h3>
+                <ul id="circuit-records">
+                    <!-- Historical records for the circuit will display here -->
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
